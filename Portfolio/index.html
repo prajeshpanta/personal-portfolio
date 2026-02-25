@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajesh Bilash Panta — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║            NAVBAR                    ║
+       ╚══════════════════════════════════════╝ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="nav-bracket">[</span>PBP<span class="nav-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero"      class="nav-link active">HOME</a></li>
+      <li><a href="#education" class="nav-link">EDUCATION</a></li>
+      <li><a href="#skills"    class="nav-link">SKILLS</a></li>
+      <li><a href="#projects"  class="nav-link">PROJECTS</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">OPEN TO WORK</span>
+    </div>
+  </nav>
+
+
+  <!-- ╔══════════════════════════════════════╗
+       ║              HERO                    ║
+       ╚══════════════════════════════════════╝ -->
+  <section id="hero">
+
+    <div class="hero-content">
+
+      <!-- Tag chip -->
+      <div class="hero-chip">
+        <span class="chip-pulse"></span>
+        Computer Engineering Student &nbsp;·&nbsp; Lalitpur, Nepal
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name">PRAJESH<br/>BILASH<br/>PANTA</h1>
+
+      <!-- Typewriter subtitle -->
+      <div class="hero-typewriter">
+        <span id="tw-text"></span><span class="tw-caret">|</span>
+      </div>
+
+      <!-- Bio -->
+      <p class="hero-bio">
+        Passionate about <em>AI&nbsp;/&nbsp;ML</em>,
+        and <em>PHP&#8209;Wordpress&nbsp;development</em>. Building intelligent systems and
+        exploring the frontier of deep learning architectures.
+      </p>
+
+      <!-- Social Buttons -->
+      <div class="social-row">
+
+        <a href="https://github.com/prajeshpanta"
+           target="_blank" rel="noopener"
+           class="soc-btn soc-github">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207
+            11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416
+            -4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083
+            -.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834
+            2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305
+            -5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124
+            -.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509
+            11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552
+            3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84
+            1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372
+            .823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566
+            21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/prajeshpanta"
+           target="_blank" rel="noopener"
+           class="soc-btn soc-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852
+            -3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h
+            .046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267
+            5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064
+            2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225
+            0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771
+            24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0
+            22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+      </div><!-- /social-row -->
+
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-num" data-target="4">0</div>
+          <div class="stat-label">Years<br/>Study</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="9">0</div>
+          <div class="stat-label">Tech<br/>Skills</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="2">0</div>
+          <div class="stat-label">Major<br/>Projects</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">Education<br/>Levels</div>
+        </div>
+      </div>
+
+    </div><!-- /hero-content -->
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>SCROLL</span>
+    </div>
+
+  </section><!-- /hero -->
+
+
+  <!-- ╔══════════════════════════════════════╗
+       ║           EDUCATION                  ║
+       ╚══════════════════════════════════════╝ -->
+  <section id="education" class="section">
+    <div class="section-inner">
+
+      <div class="sec-head reveal">
+        <div class="sec-tag">// 02</div>
+        <h2 class="sec-title">EDUCATION</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Academic journey from schooling to engineering</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="edu-timeline">
+
+        <!-- ── Entry 1: BE Current ── -->
+        <div class="edu-card reveal">
+          <div class="edu-track">
+            <div class="edu-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="1.8" width="24" height="24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-meta-row">
+              <span class="badge-current">● CURRENT</span>
+              <span class="badge-year">2022 – Present</span>
+            </div>
+            <h3 class="edu-degree">Bachelors in Computer Engineering</h3>
+            <div class="edu-school">Kantipur Engineering College</div>
+            <div class="edu-detail-row">
+              <span class="edu-detail-chip">📚 8th Semester</span>
+              <span class="edu-detail-chip">🏆 Top Performer</span>
+            </div>
+            <p class="edu-desc">
+              Specializing in AI/ML and software engineering with hands-on research in
+              deep learning. Developing voice synthesis using ECAPA-TDNN + FastSpeech 2
+              and image captioning with CNN + Transformer architectures as academic projects.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">AI / ML</span>
+              <span class="edu-tag">Deep Learning</span>
+              <span class="edu-tag">PHP and Wordpress</span>
+              <span class="edu-tag">Research</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Entry 2: +2 Science ── -->
+        <div class="edu-card reveal">
+          <div class="edu-track">
+            <div class="edu-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="1.8" width="24" height="24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-meta-row">
+              <span class="badge-year">2020 – 2022</span>
+             
+            </div>
+            <h3 class="edu-degree">+2 Science — Higher Secondary</h3>
+            <div class="edu-school">Aroma College</div>
+            <div class="edu-detail-row">
+              <span class="edu-detail-chip">🔬 Science Stream</span>
+              <span class="edu-detail-chip">✅ Completed</span>
+            </div>
+            <p class="edu-desc">
+              Science stream with emphasis on Computer Science and Mathematics. Built a strong
+              analytical and logical thinking foundation that directly fuels my
+              approach to algorithm design and problem solving today.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">Mathematics</span>
+              <span class="edu-tag">Physics</span>
+              <span class="edu-tag">Science</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Entry 3: SEE ── -->
+        <div class="edu-card reveal">
+          <div class="edu-track">
+            <div class="edu-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="1.8" width="24" height="24">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <!-- no connector line after last entry -->
+          </div>
+          <div class="edu-body">
+            <div class="edu-meta-row">
+              <span class="badge-year">Completed 2019</span>
+            </div>
+            <h3 class="edu-degree">SEE — Secondary Education Examination</h3>
+            <div class="edu-school">Greenland Public School</div>
+            <div class="edu-detail-row">
+              
+            </div>
+            <p class="edu-desc">
+              Completed schooling with distinction. Developed core academic discipline
+              and a passion for technology that led to pursuing computer engineering.
+            </p>
+            
+          </div>
+        </div>
+
+      </div><!-- /edu-timeline -->
+    </div>
+  </section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║         TECHNICAL SKILLS             ║
+     ╚══════════════════════════════════════╝ -->
+<section id="skills" class="section section-alt">
+  <div class="section-inner">
+
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 03</div>
+      <h2 class="sec-title">TECHNICAL SKILLS</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-sub">Technologies and tools I work with</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- Programming Languages -->
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3 class="skill-card-title">Programming Languages</h3>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">C / C++</span>
+          <span class="skill-chip">PHP</span>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="skill-card-title">Web Development</h3>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">HTML / CSS</span>
+          <span class="skill-chip">React</span>
+          <span class="skill-chip">Node.js</span>
+          <span class="skill-chip">WordPress</span>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning -->
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3 class="skill-card-title">AI &amp; Machine Learning</h3>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">PyTorch</span>
+          <span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">Deep Learning</span>
+          <span class="skill-chip">NLP / Speech</span>
+        </div>
+      </div>
+
+      <!-- Tools & DevOps -->
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="skill-card-title">Tools &amp; DevOps</h3>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Git / GitHub</span>
+          <span class="skill-chip">Linux / CLI</span>
+          <span class="skill-chip">VS Code</span>
+          <span class="skill-chip">Docker</span>
+        </div>
+      </div>
+
+    </div><!-- /skills-grid -->
+  </div>
+</section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║            PROJECTS                  ║
+       ╚══════════════════════════════════════╝ -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+
+      <div class="sec-head reveal">
+        <div class="sec-tag">// 04</div>
+        <h2 class="sec-title">PROJECTS</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Research &amp; engineering work</p>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card reveal">
+          <span class="pc-tl"></span><span class="pc-br"></span>
+          <div class="proj-top">
+            <span class="proj-badge proj-major">MAJOR PROJECT</span>
+            <span class="proj-emoji">🎙️</span>
+          </div>
+          <h3 class="proj-name">Voice Cloning</h3>
+          <p class="proj-desc">
+            Deep learning system that replicates any speaker's voice from minimal audio
+            samples, synthesizing natural speech using state-of-the-art neural TTS architectures.
+          </p>
+          <div class="proj-techs">
+            <span class="tech-tag">ECAPA-TDNN</span>
+            <span class="tech-tag">FastSpeech 2</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+          </div>
+          <a href="https://github.com/prajeshpanta" target="_blank"
+             rel="noopener" class="proj-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" width="14" height="14">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="proj-card reveal">
+          <span class="pc-tl"></span><span class="pc-br"></span>
+          <div class="proj-top">
+            <span class="proj-badge proj-minor">MINOR PROJECT</span>
+            <span class="proj-emoji">🖼️</span>
+          </div>
+          <h3 class="proj-name">Image Captioning</h3>
+          <p class="proj-desc">
+            End-to-end model generating accurate natural-language descriptions for images
+            using a CNN encoder to extract visual features fed into a Transformer decoder.
+          </p>
+          <div class="proj-techs">
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Transformer</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+          </div>
+          <a href="https://github.com/prajeshpanta" target="_blank"
+             rel="noopener" class="proj-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                 stroke-width="2" width="14" height="14">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+      </div><!-- /proj-grid -->
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════╗
+       ║             FOOTER                   ║
+       ╚══════════════════════════════════════╝ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-name">PRAJESH BILASH PANTA</div>
+      <div class="footer-links">
+        <a href="https://github.com/prajeshpanta"
+           target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <span class="footer-dot">·</span>
+        <a href="https://linkedin.com/in/prajeshpanta"
+           target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <span class="footer-dot">·</span>
+        <a href="mailto:prajeshpanta@gmail.com" class="footer-link">Email</a>
+      </div>
+      <div class="footer-copy">© 2025 · Lalitpur, Nepal</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
