@@ -574,4 +574,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initReveal();
   renderAuthState();
+
+  /* ── Auto-open login modal if URL contains #login or #register ── */
+  const hash = window.location.hash;
+  if (hash === '#login') {
+    setTimeout(() => { openAuth(); switchTab('login'); }, 500);
+  }
+  if (hash === '#register') {
+    setTimeout(() => { openAuth(); switchTab('register'); }, 500);
+  }
 });
