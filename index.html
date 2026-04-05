@@ -611,7 +611,6 @@ async function loadProjects() {
   } catch(e) { /* silently fail, known projects still show */ }
 }
 loadProjects();
-
 // GREETING
 function setGreeting() {
   const hour = new Date().getHours();
@@ -632,7 +631,7 @@ function setGreeting() {
   }
 }
 setGreeting();
-
+  
 // CONTACT FORM
 function submitForm() {
   const name = document.getElementById('c-name').value.trim();
