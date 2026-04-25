@@ -48,15 +48,7 @@
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(10px);
-    transition: background 0.3s;
   }
-  .nav-logo {
-    font-family: var(--sans);
-    font-size: 1.5rem; font-weight: 800;
-    color: var(--accent); text-decoration: none;
-    letter-spacing: -0.5px;
-  }
-  .nav-logo span { color: var(--text); }
   .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
   .nav-links a {
     font-family: var(--mono); font-size: 0.8rem; font-weight: 400;
@@ -77,7 +69,7 @@
     flex-direction: column; text-align: center;
     padding: 8rem 3rem 4rem;
     max-width: 1200px; margin: 0 auto;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   .hero-text { flex: none; display: flex; flex-direction: column; align-items: center; }
   .hero-name {
@@ -112,13 +104,9 @@
     border-radius: 50px; font-family: var(--sans);
     font-weight: 700; font-size: 0.95rem;
     text-decoration: none; transition: all 0.2s;
-    border: none; cursor: pointer;
   }
   .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,99,235,0.3); }
-  .hero-image {
-    display: flex; justify-content: center;
-    order: -1;
-  }
+
   .hero-image img {
     width: 300px; height: 300px;
     border-radius: 50%; object-fit: cover;
@@ -134,9 +122,6 @@
     text-align: center; margin-bottom: 4rem;
     text-transform: uppercase;
   }
-
-  /* PROJECTS */
-  #projects { background: none; }
   .section-eyebrow {
     font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em;
     color: var(--accent2); text-align: center; margin-bottom: 0.5rem;
@@ -151,11 +136,13 @@
     width: 48px; height: 3px; border-radius: 2px;
     background: var(--accent2); margin: 0.6rem auto 1rem;
   }
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 900px;
+
+  /* PROJECTS - Vertical Layout */
+  .projects-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
     margin: 0 auto;
   }
   .project-card {
@@ -163,10 +150,7 @@
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 2rem;
-    text-decoration: none; color: var(--text);
     transition: all 0.25s;
-    display: flex; flex-direction: column; gap: 1rem;
-    cursor: pointer; position: relative;
   }
   .project-card:hover {
     transform: translateY(-6px);
@@ -184,39 +168,34 @@
   }
   .badge-major { color: #2e7d55; border-color: #2e7d55; background: #2e7d5515; }
   .badge-minor { color: var(--accent); border-color: var(--accent); background: rgba(37,99,235,0.08); }
-  .project-emoji { font-size: 1.6rem; line-height: 1; }
+  .project-emoji { font-size: 1.8rem; line-height: 1; }
   .project-name {
     font-family: var(--sans); font-size: 1.4rem;
-    font-weight: 800; color: var(--text); margin: 0;
-    letter-spacing: -0.3px;
+    font-weight: 800; letter-spacing: -0.3px;
+    margin: 0.5rem 0 0.8rem;
   }
   .project-desc {
-    font-size: 0.88rem; color: var(--text);
-    line-height: 1.7; flex: 1;
+    font-size: 0.88rem; line-height: 1.7;
     font-family: var(--mono);
-    opacity: 0.82;
+    opacity: 0.85;
+    margin-bottom: 1.2rem;
   }
   .project-meta {
-    display: flex; gap: 0.6rem; align-items: center;
-    flex-wrap: wrap;
+    display: flex; gap: 0.6rem; flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
   .project-lang {
     font-family: var(--mono); font-size: 0.75rem;
     background: var(--bg2); padding: 5px 12px; border-radius: 50px;
-    color: var(--text); border: 1px solid var(--border);
+    border: 1px solid var(--border);
     font-weight: 600;
-  }
-  .project-stars {
-    font-family: var(--mono); font-size: 0.75rem;
-    color: var(--text-muted);
   }
   .project-github-btn {
     display: inline-flex; align-items: center; gap: 0.4rem;
     font-family: var(--mono); font-size: 0.82rem; font-weight: 700;
     color: var(--accent2); border: 1.5px solid var(--accent2);
     background: none; padding: 0.55rem 1.2rem; border-radius: 8px;
-    text-decoration: none; transition: all 0.2s; margin-top: 0.25rem;
-    width: fit-content;
+    text-decoration: none; transition: all 0.2s;
   }
   .project-github-btn:hover { background: var(--accent2); color: #fff; }
 
@@ -277,7 +256,7 @@
   .edu-degree {
     font-family: var(--sans); font-size: 1.2rem;
     font-weight: 800; margin-bottom: 0.4rem;
-    color: var(--text); letter-spacing: -0.2px;
+    letter-spacing: -0.2px;
   }
   .edu-year {
     font-family: var(--mono); font-size: 0.82rem;
@@ -293,31 +272,25 @@
     background: linear-gradient(to bottom, var(--accent), var(--accent2));
   }
 
-  /* ===================== GET IN TOUCH SECTION ===================== */
+  /* CONTACT */
   #contact-section {
-    background: none;
     padding: 6rem 3rem;
     max-width: 1200px;
     margin: 0 auto;
   }
-
   .git-wrap {
     background: var(--bg2);
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 3rem 2.5rem;
   }
-  .git-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
+  .git-header { text-align: center; margin-bottom: 2.5rem; }
   .git-title {
     font-family: var(--sans);
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
-    color: var(--text);
     letter-spacing: -1px;
-    margin: 0 0 0.35rem;
+    margin-bottom: 0.35rem;
     text-transform: uppercase;
   }
   .git-underline {
@@ -328,10 +301,8 @@
   }
   .git-sub {
     color: var(--text-muted);
-    font-size: 0.88rem;
     font-family: var(--mono);
-    margin: 0;
-    opacity: 0.85;
+    font-size: 0.88rem;
   }
   .git-grid {
     display: grid;
@@ -345,16 +316,13 @@
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 1.8rem;
-    transition: box-shadow 0.2s;
   }
-  .git-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
   .git-card-title {
     font-family: var(--sans);
     font-size: 1.1rem;
     font-weight: 800;
     color: var(--accent);
-    margin: 0 0 1.2rem;
-    letter-spacing: -0.2px;
+    margin-bottom: 1.2rem;
   }
   .git-info-item {
     background: var(--bg2);
@@ -365,134 +333,67 @@
     display: flex;
     align-items: center;
     gap: 0.9rem;
-    transition: border-color 0.2s;
   }
-  .git-info-item:hover { border-color: var(--accent); }
   .git-icon {
     width: 36px; height: 36px;
     flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
   }
-  .git-icon-mail { background: #fff; border: 1px solid var(--border); }
-  .git-icon-phone { background: #25d366; }
-  .git-icon-loc { background: var(--accent); }
   .git-info-label {
     font-size: 0.7rem;
     color: var(--text-muted);
-    margin: 0 0 2px;
+    margin-bottom: 2px;
     font-family: var(--mono);
-    letter-spacing: 0.05em;
     text-transform: uppercase;
   }
   .git-info-val {
     font-size: 0.88rem;
-    color: var(--text);
-    margin: 0;
     font-weight: 700;
     font-family: var(--mono);
   }
-  .git-socials {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1.2rem;
-  }
-  .git-soc-btn {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--bg2);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .git-soc-btn:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-  .git-soc-btn:hover svg { fill: #fff !important; }
   .git-input {
     width: 100%;
-    box-sizing: border-box;
     background: var(--bg2);
     border: 1px solid var(--border);
     border-radius: 50px;
     padding: 0.85rem 1.2rem;
-    color: var(--text);
     font-family: var(--mono);
     font-size: 0.88rem;
-    outline: none;
     margin-bottom: 0.85rem;
-    transition: border-color 0.2s;
   }
-  .git-input:focus { border-color: var(--accent); }
-  .git-input::placeholder { color: var(--text-muted); }
+  .git-input:focus { border-color: var(--accent); outline: none; }
   textarea.git-input {
     border-radius: 16px;
     min-height: 130px;
     resize: vertical;
   }
   .git-btn {
-    align-self: center;
-    width: fit-content;
     padding: 0.9rem 3rem;
-    border: none;
-    border-radius: 50px;
     background: var(--accent);
     color: #fff;
+    border: none;
+    border-radius: 50px;
     font-family: var(--sans);
     font-weight: 700;
-    font-size: 1rem;
     cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
     margin: 0 auto;
-    transition: all 0.2s;
   }
   .git-btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
   }
-
-  @media (max-width: 650px) {
-    .git-grid { grid-template-columns: 1fr; }
-    .git-wrap { padding: 2rem 1.2rem; }
-  }
-  /* ===================== END CONTACT ===================== */
-
-  /* FOOTER */
-  footer {
-    text-align: center; padding: 2rem;
-    font-family: var(--mono); font-size: 0.78rem;
-    color: var(--text-muted); border-top: 1px solid var(--border);
-  }
-
-  /* ANIMATIONS */
-  .fade-in {
-    opacity: 0; transform: translateY(24px);
-    animation: fadeIn 0.7s ease forwards;
-  }
-  @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .fade-in:nth-child(1) { animation-delay: 0.1s; }
-  .fade-in:nth-child(2) { animation-delay: 0.2s; }
-  .fade-in:nth-child(3) { animation-delay: 0.3s; }
-  .fade-in:nth-child(4) { animation-delay: 0.4s; }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1rem; }
     .nav-links a { font-size: 0.72rem; }
-    #about { padding: 7rem 1.5rem 3rem; gap: 1.5rem; }
-    .hero-desc { margin: 0 auto 2rem; }
+    #about { padding: 7rem 1.5rem 3rem; }
     section { padding: 4rem 1.5rem; }
-    #contact-section { padding: 4rem 1.5rem; }
-    .projects-grid { grid-template-columns: 1fr; }
+    .git-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -511,27 +412,24 @@
 </nav>
 
 <!-- HERO -->
-<div id="about" style="max-width:1200px;margin:0 auto;">
+<div id="about">
   <div class="hero-text fade-in">
     <div id="greeting" style="font-family:var(--mono);font-size:0.9rem;color:var(--text-muted);margin-bottom:0.5rem;letter-spacing:0.05em;"></div>
     <div class="hero-role">Computer Engineer & Developer</div>
     <h1 class="hero-name">PRAJESH<br>BILASH PANTA</h1>
     <p class="hero-desc">Passionate about <strong style="color:var(--accent);">AI/ML</strong> and <strong style="color:var(--accent);">PHP-WordPress Development</strong>. Driven by curiosity, turning real-world problems into elegant solutions through code. When not debugging or building, you'll find me with a warm cup of tea ☕ or cheering on my favorite cricket team 🏏</p>
+    
     <div class="hero-socials">
-      <a href="https://github.com/prajeshpanta" target="_blank" title="GitHub">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-      </a>
-      <a href="https://x.com/prajeshpanta" target="_blank" title="X (Twitter)">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/prajeshpanta" target="_blank" title="LinkedIn">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
+      <a href="https://github.com/prajeshpanta" target="_blank" title="GitHub">GitHub</a>
+      <a href="https://x.com/prajeshpanta" target="_blank" title="X">X</a>
+      <a href="https://linkedin.com/in/prajeshpanta" target="_blank" title="LinkedIn">LinkedIn</a>
     </div>
     <a href="#contact" class="btn-primary">Contact Me</a>
   </div>
+  
   <div class="hero-image fade-in">
-    <div class="hero-image-placeholder" style="width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;border:4px solid var(--accent);box-shadow:0 20px 60px rgba(0,0,0,0.15);color:#fff;font-weight:800;">P</div>
+    <img src="https://files.oaiusercontent.com/file-VvJqK8vN0zZfX8vL9pQ2mX?se=2026-04-26T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3DIPVJQ.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+         alt="Prajesh Bilash Panta" />
   </div>
 </div>
 
@@ -541,40 +439,45 @@
   <h2 class="section-title">Projects</h2>
   <div class="section-divider"></div>
   <p class="section-subtitle">Research & engineering work</p>
-  <div class="projects-grid" id="projects-grid">
+  
+  <div class="projects-timeline" id="projects-timeline">
     <div class="project-card">
       <div class="project-card-header">
         <span class="project-badge badge-major">Major Project</span>
         <span class="project-emoji">🎙️</span>
       </div>
       <div class="project-name">Voice Cloning System</div>
-      <div class="project-desc">🔊 Replicates any speaker's voice from just a few audio samples — synthesizing hyper-realistic speech using cutting-edge FastSpeech2 &amp; ECAPA-TDNN neural architectures.</div>
+      <div class="project-desc">Replicates any speaker's voice from just a few audio samples — synthesizing hyper-realistic speech using FastSpeech2 & ECAPA-TDNN neural architectures.</div>
       <div class="project-meta">
         <span class="project-lang">FastSpeech 2</span>
         <span class="project-lang">ECAPA-TDNN</span>
         <span class="project-lang">Python</span>
         <span class="project-lang">PyTorch</span>
       </div>
-      <a class="project-github-btn" href="https://github.com/prajeshpanta/Voice_cloning_system_using_Fastspeech2-ECAPA-TDNN" target="_blank" rel="noopener">View on GitHub →</a>
+      <a class="project-github-btn" href="https://github.com/prajeshpanta/Voice_cloning_system_using_Fastspeech2-ECAPA-TDNN" target="_blank">View on GitHub →</a>
     </div>
+
     <div class="project-card">
       <div class="project-card-header">
         <span class="project-badge badge-minor">Minor Project</span>
         <span class="project-emoji">🖼️</span>
       </div>
       <div class="project-name">Image Captioning in Nepali</div>
-      <div class="project-desc">🖼️ Bridges vision and language — an end-to-end AI model that sees an image and describes it in Nepali. Powered by a CNN encoder and a Transformer decoder.</div>
+      <div class="project-desc">Bridges vision and language — an end-to-end AI model that sees an image and describes it in Nepali using CNN encoder and Transformer decoder.</div>
       <div class="project-meta">
         <span class="project-lang">CNN</span>
         <span class="project-lang">Transformer</span>
         <span class="project-lang">Python</span>
         <span class="project-lang">TensorFlow</span>
       </div>
-      <a class="project-github-btn" href="https://github.com/prajeshpanta/Image-Captioning_in_Nepali-using-CNN-Transformer" target="_blank" rel="noopener">View on GitHub →</a>
+      <a class="project-github-btn" href="https://github.com/prajeshpanta/Image-Captioning_in_Nepali-using-CNN-Transformer" target="_blank">View on GitHub →</a>
     </div>
   </div>
-  <div class="projects-grid" id="projects-grid-extra" style="margin-top:1.5rem;"></div>
-  <div style="text-align:center;margin-top:2.5rem;">
+
+  <!-- Dynamic GitHub Projects -->
+  <div class="projects-timeline" id="projects-grid-extra" style="margin-top: 2rem;"></div>
+
+  <div style="text-align:center; margin-top: 3rem;">
     <a href="https://github.com/prajeshpanta" target="_blank" class="btn-primary" style="background:var(--bg2);color:var(--text);border:1px solid var(--border);">View All on GitHub →</a>
   </div>
 </section>
@@ -629,19 +532,19 @@
 <section id="education">
   <h2 class="section-title">Education</h2>
   <div class="edu-timeline">
-    <div class="edu-card fade-in">
+    <div class="edu-card">
       <div class="edu-degree">Bachelor in Computer Engineering</div>
       <div class="edu-year">2022 — Present</div>
       <div class="edu-institution">Kantipur Engineering College, Tribhuvan University<br>Dhapakhel, Lalitpur, Nepal</div>
     </div>
     <div class="edu-connector"></div>
-    <div class="edu-card fade-in">
+    <div class="edu-card">
       <div class="edu-degree">Higher Secondary (Science)</div>
       <div class="edu-year">2020 — 2022</div>
       <div class="edu-institution">Aroma College of Science and Management<br>Chitwan, Nepal</div>
     </div>
     <div class="edu-connector"></div>
-    <div class="edu-card fade-in">
+    <div class="edu-card">
       <div class="edu-degree">Primary & Secondary School</div>
       <div class="edu-year">2007 — 2019</div>
       <div class="edu-institution">Greenland Public School<br>Bharatpur, Chitwan, Nepal</div>
@@ -649,7 +552,7 @@
   </div>
 </section>
 
-<!-- GET IN TOUCH — NEW CONTACT SECTION -->
+<!-- CONTACT -->
 <section id="contact-section">
   <div class="git-wrap" id="contact">
     <div class="git-header">
@@ -657,65 +560,37 @@
       <div class="git-underline"></div>
       <p class="git-sub">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
     </div>
-
     <div class="git-grid">
-      <!-- LEFT: Contact Info -->
       <div class="git-card">
         <p class="git-card-title">Contact Information</p>
-
         <div class="git-info-item">
-          <div class="git-icon git-icon-mail">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" fill="#EA4335"/><path d="M2 7l10 7 10-7" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
-          </div>
+          <div class="git-icon git-icon-mail">✉️</div>
           <div>
             <p class="git-info-label">Email</p>
             <p class="git-info-val">prajeshpanta8@gmail.com</p>
           </div>
         </div>
-
         <div class="git-info-item">
-          <div class="git-icon git-icon-phone">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15.4 15.4 0 006.6 6.6l2.2-2.2a1 1 0 011.05-.24c1.17.4 2.43.61 3.73.61A1 1 0 0121 16.6v3.5A1 1 0 0120 21C10.6 21 3 13.4 3 4a1 1 0 011-.93h3.5A1 1 0 018.43 4c0 1.3.21 2.56.61 3.73a1 1 0 01-.24 1.06L6.6 10.8z" fill="#fff"/></svg>
-          </div>
+          <div class="git-icon git-icon-phone">📞</div>
           <div>
             <p class="git-info-label">Phone</p>
             <p class="git-info-val">9845788569</p>
           </div>
         </div>
-
         <div class="git-info-item">
-          <div class="git-icon git-icon-loc">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" fill="#fff"/></svg>
-          </div>
+          <div class="git-icon git-icon-loc">📍</div>
           <div>
             <p class="git-info-label">Location</p>
             <p class="git-info-val">Dhapakhel, Lalitpur</p>
           </div>
         </div>
-
-        <div class="git-socials">
-          <a class="git-soc-btn" href="https://github.com/prajeshpanta" target="_blank" title="GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#c9d1d9"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </a>
-          <a class="git-soc-btn" href="https://linkedin.com/in/prajeshpanta" target="_blank" title="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a class="git-soc-btn" href="https://x.com/prajeshpanta" target="_blank" title="X / Twitter">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-        </div>
       </div>
-
-      <!-- RIGHT: Message Form -->
       <div class="git-card">
         <p class="git-card-title">Send a Message</p>
         <input class="git-input" type="text" placeholder="Your name" id="git-name" />
         <input class="git-input" type="email" placeholder="your.email@example.com" id="git-email" />
         <textarea class="git-input" placeholder="Your message..." id="git-msg"></textarea>
-        <button class="git-btn" onclick="sendMessage()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          Send Message
-        </button>
+        <button class="git-btn" onclick="sendMessage()">Send Message</button>
       </div>
     </div>
   </div>
@@ -727,67 +602,61 @@
 </footer>
 
 <script>
-// THEME TOGGLE
+// Theme Toggle
 function toggleTheme() {
   const isDark = document.body.getAttribute('data-theme') === 'dark';
   document.body.setAttribute('data-theme', isDark ? '' : 'dark');
   document.querySelector('.theme-btn').textContent = isDark ? '☀️' : '🌙';
   localStorage.setItem('theme', isDark ? 'light' : 'dark');
 }
-(function() {
-  const t = localStorage.getItem('theme');
-  if (t === 'dark') { document.body.setAttribute('data-theme', 'dark'); document.querySelector('.theme-btn').textContent = '🌙'; }
-})();
 
-// EXTRA GITHUB REPOS
-const KNOWN_REPOS = [
-  'Voice_cloning_system_using_Fastspeech2-ECAPA-TDNN',
-  'Image-Captioning_in_Nepali-using-CNN-Transformer'
-];
-const langIcons = { JavaScript:'🌐', TypeScript:'📘', Python:'🐍', HTML:'🔷', CSS:'🎨', Jupyter:'📓', C:'⚙️', 'C++':'⚙️', Java:'☕', PHP:'🐘', Shell:'🖥️', default:'💻' };
+// Load extra GitHub projects
 async function loadProjects() {
-  const grid = document.getElementById('projects-grid-extra');
+  const container = document.getElementById('projects-grid-extra');
   try {
-    const res = await fetch('https://api.github.com/users/prajeshpanta/repos?sort=updated&per_page=20');
+    const res = await fetch('https://api.github.com/users/prajeshpanta/repos?sort=updated&per_page=15');
     if (!res.ok) return;
     const repos = await res.json();
-    const filtered = repos.filter(r => !r.fork && r.name !== 'prajeshpanta' && !KNOWN_REPOS.includes(r.name));
-    if (filtered.length === 0) return;
-    grid.innerHTML = filtered.slice(0, 8).map(repo => {
-      const lang = repo.language || 'default';
-      const icon = langIcons[lang] || langIcons.default;
-      const desc = repo.description || '⚡ A project by Prajesh Bilash Panta.';
-      const topics = repo.topics && repo.topics.length > 0 ? repo.topics.slice(0, 4) : (repo.language ? [repo.language] : []);
-      return `<div class="project-card">
-        <div class="project-card-header"><span class="project-badge badge-minor">Project</span><span class="project-emoji">${icon}</span></div>
-        <div class="project-name">${repo.name.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</div>
-        <div class="project-desc">${desc.length>130?desc.slice(0,127)+'...':desc}</div>
-        <div class="project-meta">${topics.map(t=>`<span class="project-lang">${t}</span>`).join('')}${repo.stargazers_count>0?`<span class="project-stars">⭐ ${repo.stargazers_count}</span>`:''}</div>
-        <a class="project-github-btn" href="${repo.html_url}" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>`;
-    }).join('');
+    const known = ['Voice_cloning_system_using_Fastspeech2-ECAPA-TDNN', 'Image-Captioning_in_Nepali-using-CNN-Transformer'];
+    const filtered = repos.filter(r => !r.fork && !known.includes(r.name));
+
+    container.innerHTML = filtered.slice(0, 6).map(repo => `
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-badge badge-minor">Project</span>
+          <span class="project-emoji">💻</span>
+        </div>
+        <div class="project-name">${repo.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</div>
+        <div class="project-desc">${repo.description || 'A project by Prajesh Bilash Panta.'}</div>
+        <div class="project-meta">
+          ${repo.language ? `<span class="project-lang">${repo.language}</span>` : ''}
+        </div>
+        <a class="project-github-btn" href="${repo.html_url}" target="_blank">View on GitHub →</a>
+      </div>
+    `).join('');
   } catch(e) {}
 }
 loadProjects();
 
-// GREETING
+// Greeting
 function setGreeting() {
   const hour = new Date().getHours();
-  let msg = hour>=5&&hour<12 ? '🌅 Good Morning! Welcome to my portfolio.'
-          : hour>=12&&hour<17 ? '☀️ Good Afternoon! Welcome to my portfolio.'
-          : hour>=17&&hour<21 ? '🌆 Good Evening! Welcome to my portfolio.'
-          : '🌙 Good Night! Thanks for visiting my portfolio.';
-  const el = document.getElementById('greeting');
-  if (el) { el.innerHTML = `<span style="color:var(--accent2);font-weight:700;font-size:1rem;">${msg}</span>`; }
+  let msg = hour >= 5 && hour < 12 ? '🌅 Good Morning!' :
+            hour >= 12 && hour < 17 ? '☀️ Good Afternoon!' :
+            hour >= 17 && hour < 21 ? '🌆 Good Evening!' : '🌙 Good Night!';
+  document.getElementById('greeting').innerHTML = `<span style="color:var(--accent2);font-weight:700;">${msg} Welcome to my portfolio.</span>`;
 }
 setGreeting();
 
-// SEND MESSAGE
+// Send Message
 function sendMessage() {
-  const name  = document.getElementById('git-name').value.trim();
+  const name = document.getElementById('git-name').value.trim();
   const email = document.getElementById('git-email').value.trim();
-  const msg   = document.getElementById('git-msg').value.trim();
-  if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
+  const msg = document.getElementById('git-msg').value.trim();
+  if (!name || !email || !msg) {
+    alert('Please fill in all fields.');
+    return;
+  }
   const mailto = `mailto:prajeshpanta8@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg + '\n\nFrom: ' + email)}`;
   window.location.href = mailto;
 }
