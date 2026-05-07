@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root {
   --bg-primary: #050508;
@@ -235,6 +236,7 @@ textarea:focus ~ .form-label,textarea:not(:placeholder-shown) ~ .form-label { to
 .submit-btn:hover { transform:translateY(-2px); box-shadow:0 10px 35px rgba(99,179,255,.3); }
 .form-status { margin-top:.9rem; padding:.7rem .9rem; border-radius:var(--radius-sm); font-size:.83rem; font-weight:500; display:none; }
 .form-status.success { display:block; background:rgba(34,197,94,.1); border:1px solid rgba(34,197,94,.2); color:#22c55e; }
+.form-status.error { display:block; background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.2); color:#ef4444; }
 footer { background:var(--bg-secondary); border-top:1px solid var(--border); padding:2.5rem 1.5rem; position:relative; z-index:1; }
 .footer-inner { max-width:1200px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:1.25rem; text-align:center; }
 .footer-logo { font-family:'JetBrains Mono',monospace; font-size:.95rem; font-weight:700; background:var(--gradient-main); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
@@ -312,7 +314,7 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
 <body>
 <div id="loader">
   <div class="loader-inner">
-    <div class="loader-logo">PBP.DEV</div>
+    <div class="loader-logo">Prajesh Bilash Panta - Portfolio</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 </div>
@@ -328,7 +330,7 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
 </div>
 <nav>
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">PBP.DEV</a>
+    <a href="#hero" class="nav-logo">Prajesh Bilash Panta - Portfolio</a>
     <ul class="nav-links">
       <li><a href="#about" data-section="about">About</a></li>
       <li><a href="#projects" data-section="projects">Projects</a></li>
@@ -397,7 +399,7 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
       </div>
       <div class="hero-stats">
         <div class="stat-item"><div class="stat-num">2+</div><div class="stat-label">AI Projects</div></div>
-        <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years Study</div></div>
+        <div class="stat-item"><div class="stat-num">BE</div><div class="stat-label">Computer Engineering Graduate</div></div>
         <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Technologies</div></div>
       </div>
     </div>
@@ -409,7 +411,7 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
     <div class="about-text reveal">
       <div class="section-label">About Me</div>
       <h2 class="section-title">Engineering the <span class="gradient-text">future</span></h2>
-      <p>I'm a Computer Engineering student at Kantipur Engineering College (Tribhuvan University), deeply passionate about building AI systems that solve real-world problems. My work spans neural network architectures, deep learning pipelines, and full-stack web development.</p>
+      <p>I'm a Computer Engineering graduate from Kantipur Engineering College (Tribhuvan University), deeply passionate about building AI systems that solve real-world problems. My work spans neural network architectures, deep learning pipelines, and full-stack web development.</p>
       <p>Whether it's synthesizing speech from text using FastSpeech2 or captioning images in Nepali with CNN-Transformer pipelines — I thrive at the cutting edge of technology, constantly pushing what's possible.</p>
     </div>
     <div class="about-highlights">
@@ -521,12 +523,12 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
   <div class="timeline">
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
-      <div class="timeline-year">2022 — Present</div>
+      <div class="timeline-year">2022 — 2026</div>
       <div class="timeline-card">
         <div class="timeline-degree">Bachelor of Computer Engineering</div>
         <div class="timeline-school">Kantipur Engineering College, Tribhuvan University</div>
-        <div class="timeline-desc">Currently in my final years, focusing on AI/ML systems, signal processing, and software engineering. Major project on Voice Cloning, minor on Neural Image Captioning.</div>
-        <span class="timeline-badge">Currently Enrolled</span>
+        <div class="timeline-desc">Computer Engineering graduate passionate about AI/ML, deep learning, and software engineering, with projects in Voice Cloning and Neural Image Captioning.</div>
+        <span class="timeline-badge">Bachelor Completed</span>
       </div>
     </div>
     <div class="timeline-item reveal reveal-delay-1">
@@ -582,7 +584,7 @@ footer { background:var(--bg-secondary); border-top:1px solid var(--border); pad
 </main>
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">PBP.DEV</div>
+    <div class="footer-logo">Prajesh Bilash Panta - Portfolio</div>
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -628,7 +630,7 @@ const navObs=new IntersectionObserver(entries=>{
 document.querySelectorAll('section[id],[id="about"],[id="skills"]').forEach(s=>navObs.observe(s));
 const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
-const roles=['Computer Engineer','AI/ML Developer','Deep Learning Researcher','PHP & WordPress Dev','Voice AI Builder'];
+const roles=['Computer Engineer','AI/ML Developer','Deep Learning Researcher','PHP & WordPress Developer'];
 const tw=document.getElementById('typewriter');
 let ri=0,ci=0,del=false;
 function type(){const c=roles[ri];if(del){tw.textContent=c.substring(0,ci--);if(ci<0){del=false;ri=(ri+1)%roles.length;setTimeout(type,400);return;}}else{tw.textContent=c.substring(0,ci++);if(ci>c.length){del=true;setTimeout(type,2000);return;}}setTimeout(type,del?50:90);}
@@ -655,7 +657,8 @@ async function fetchGitHub(){
     const res=await fetch('https://api.github.com/users/prajeshpanta/repos?sort=updated&per_page=6');
     if(!res.ok)throw new Error();
     const repos=await res.json();
-    const f=repos.filter(r=>!r.fork&&r.description);
+    const excluded=['personal-portfolio','Voice_cloning_system_using_Fastspeech2-ECAPA-TDNN','Image-Captioning_in_Nepali-using-CNN-Transformer','Todo-App-'];
+    const f=repos.filter(r=>!r.fork&&r.description&&!excluded.includes(r.name));
     if(!f.length){c.style.display='none';return;}
     c.innerHTML=f.slice(0,6).map(r=>`<div class="gh-card reveal"><div class="gh-card-name">${r.name}</div><div class="gh-card-desc">${r.description}</div><div class="gh-card-meta">${r.language?`<span><i data-lucide="code-2" width="11" height="11"></i>${r.language}</span>`:''}<span><i data-lucide="star" width="11" height="11"></i>${r.stargazers_count}</span><span><i data-lucide="git-fork" width="11" height="11"></i>${r.forks_count}</span></div><div style="margin-top:.8rem;"><a href="${r.html_url}" target="_blank" rel="noopener" class="project-link" style="font-size:.78rem;"><i data-lucide="github" width="13" height="13"></i>&nbsp;View on GitHub&nbsp;<i data-lucide="arrow-right" width="11" height="11"></i></a></div></div>`).join('');
     lucide.createIcons();
@@ -663,16 +666,65 @@ async function fetchGitHub(){
   }catch{const t=document.querySelector('.github-projects-title');if(t)t.style.display='none';c.style.display='none';}
 }
 fetchGitHub();
-document.getElementById('contact-form').addEventListener('submit',async function(e){
+// ── EmailJS Configuration ──────────────────────────────────────────────────
+// 1. Sign up free at https://www.emailjs.com
+// 2. Add Gmail service → connect prajeshpanta8@gmail.com
+// 3. Create a template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+// 4. Replace the three values below with your actual IDs from the EmailJS dashboard
+const EMAILJS_PUBLIC_KEY  = '2--6eYuKPulcnFFrp';   // Account → API Keys
+const EMAILJS_SERVICE_ID  = 'service_n5xwxpe';   // Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'template_0wcz48v';  // Email Templates → Template ID
+// ──────────────────────────────────────────────────────────────────────────
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const btn=document.getElementById('submit-btn'),btnText=document.getElementById('btn-text'),status=document.getElementById('form-status');
-  btn.disabled=true;btnText.textContent='Sending...';
-  await new Promise(r=>setTimeout(r,1500));
-  const n=document.getElementById('name').value,em=document.getElementById('email').value,s=document.getElementById('subject').value,m=document.getElementById('message').value;
-  window.location.href=`mailto:prajeshpanta8@gmail.com?subject=${encodeURIComponent(s||'Portfolio Contact: '+n)}&body=${encodeURIComponent('From: '+n+'\nEmail: '+em+'\n\n'+m)}`;
-  btn.disabled=false;btnText.textContent='Send Message';
-  status.className='form-status success';status.textContent='✓ Opening your email client... Thank you!';
-  this.reset();setTimeout(()=>status.className='form-status',5000);
+  const btn      = document.getElementById('submit-btn');
+  const btnText  = document.getElementById('btn-text');
+  const status   = document.getElementById('form-status');
+
+  const name    = document.getElementById('name').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    status.className = 'form-status error';
+    status.textContent = '✕ Please fill in your name, email, and message.';
+    status.style.display = 'block';
+    return;
+  }
+
+  btn.disabled = true;
+  btnText.textContent = 'Sending...';
+  status.className = 'form-status';
+  status.style.display = 'none';
+
+  try {
+    const result = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_email:   'prajeshpanta8@gmail.com',
+      from_name:  name,
+      from_email: email,
+      subject:    subject || 'Portfolio Contact: ' + name,
+      message:    message,
+      reply_to:   email,
+    });
+    console.log('EmailJS success:', result);
+    status.className = 'form-status success';
+    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+    status.style.display = 'block';
+    this.reset();
+  } catch (err) {
+    console.error('EmailJS error:', err);
+    const errDetail = err && (err.text || err.message || JSON.stringify(err));
+    status.className = 'form-status error';
+    status.textContent = '✕ Send failed (' + (errDetail || 'unknown error') + '). Email me at prajeshpanta8@gmail.com';
+    status.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    btnText.textContent = 'Send Message';
+    setTimeout(() => { status.style.display = 'none'; status.className = 'form-status'; }, 9000);
+  }
 });
 const canvas=document.querySelector('.bg-canvas');
 for(let i=0;i<15;i++){const p=document.createElement('div');p.className='particle';p.style.cssText=`left:${Math.random()*100}%;animation-duration:${9+Math.random()*11}s;animation-delay:${-Math.random()*20}s;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;background:${Math.random()>.5?'var(--accent-blue)':Math.random()>.5?'var(--accent-purple)':'var(--accent-cyan)'};`;canvas.appendChild(p);}
